@@ -5,7 +5,7 @@ export function TestComp() {
   const [data, setData] = useState(null); // 데이터를 저장할 상태
  
   const fetchData = () => {
-    fetch('https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=3fgz4vqznh')
+    fetch('https://openapi.map.naver.com/openapi/v3/maps.js?')
       .then(res => res.json())
       .then(data => setData(data))
       .catch(error => console.error(error))
