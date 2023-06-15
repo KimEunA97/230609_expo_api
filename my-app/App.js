@@ -1,21 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { WebView } from 'react-native-webview';
 
-import { TestComp } from './src/componant/testComp';
-
-export default function App() {
+const MyWebView = () => {
   return (
-    <View style={styles.container}>
-      <TestComp></TestComp>
-    </View>
+    <WebView
+      source={{ uri: 'https://www.example.com' }}
+    />
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default MyWebView;
